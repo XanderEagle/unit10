@@ -15,6 +15,13 @@ my_target = target.Target(main_surface)
 
 my_target.draw_target()
 
+
+def print_mouse_coordinates(self, position):
+    mouse_font = pygame.font._SysFont("Helvetica", 32)
+    mouse_label = mouse_font.render(position, 1, (0, 255, 255))
+    self.main_surface.blit(mouse_label, (30, 30))
+
+
 while True:
     pygame.display.update()
     for event in pygame.event.get():
