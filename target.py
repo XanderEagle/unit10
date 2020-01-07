@@ -1,6 +1,7 @@
 # Xander Eagle
 # January 6, 2020
 # this program draws a target and adds up the total points based on where the user clicks
+
 import pygame
 
 
@@ -19,7 +20,7 @@ class Target:
         pygame.draw.circle(self.main_surface, (255, 0, 0), (x, y), 150, 0)
         pygame.draw.circle(self.main_surface, (255, 255, 0), (x, y), 80, 0)
 
-    def print_mouse_coordinates(self, position):   # this function gives each color a value and adds it up the total...
+    def print_mouse_coordinates(self, position):   # this function gives each color a value and adds it to the total...
         # ...every click
         target_color = self.main_surface.get_at(position)
         if target_color == (255, 255, 0, 255):
